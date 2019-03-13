@@ -10,5 +10,5 @@ Class {
 		'library',
 		'path'
 	],
-	#category : #Windy
+	#category : #'Windy-Core'
 }

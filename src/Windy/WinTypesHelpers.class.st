@@ -1,3 +1,6 @@
+"
+I implement several type aliases for windows.
+"
 Class {
 	#name : #WinTypesHelpers,
 	#superclass : #SharedPool,
@@ -7,7 +10,7 @@ Class {
 		'ULONGLONG',
 		'WORD'
 	],
-	#category : #Windy
+	#category : #'Windy-Core'
 }
 
 { #category : #'class initialization' }

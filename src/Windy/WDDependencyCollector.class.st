@@ -1,10 +1,13 @@
+"
+I am a library visitor that collects library dependencies recursively.
+"
 Class {
 	#name : #WDDependencyCollector,
 	#superclass : #Object,
 	#instVars : [
 		'visitedLibraries'
 	],
-	#category : #Windy
+	#category : #'Windy-Core'
 }
 
 { #category : #visiting }

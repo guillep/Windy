@@ -1,3 +1,18 @@
+"
+I represent the common header of images
+
+https://docs.microsoft.com/en-us/windows/desktop/api/winnt/ns-winnt-_image_file_header
+
+typedef struct _IMAGE_FILE_HEADER {
+  WORD  Machine;
+  WORD  NumberOfSections;
+  DWORD TimeDateStamp;
+  DWORD PointerToSymbolTable;
+  DWORD NumberOfSymbols;
+  WORD  SizeOfOptionalHeader;
+  WORD  Characteristics;
+} IMAGE_FILE_HEADER, *PIMAGE_FILE_HEADER;
+"
 Class {
 	#name : #WDHeader,
 	#superclass : #FFIExternalStructure,
@@ -13,7 +28,7 @@ Class {
 	#pools : [
 		'WinTypesHelpers'
 	],
-	#category : #Windy
+	#category : #'Windy-Structures'
 }
 
 { #category : #'field definition' }

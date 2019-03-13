@@ -1,3 +1,14 @@
+"
+I implement an entry in the index of data directories, pointing to well known parts of a library.
+I contain the address of the entry (VirtualAddress), and the amount of entries at that address (Size).
+
+https://docs.microsoft.com/en-us/windows/desktop/api/winnt/ns-winnt-_image_data_directory
+
+typedef struct _IMAGE_DATA_DIRECTORY {
+  DWORD VirtualAddress;
+  DWORD Size;
+} IMAGE_DATA_DIRECTORY, *PIMAGE_DATA_DIRECTORY;
+"
 Class {
 	#name : #WDImageDataDirectory,
 	#superclass : #FFIExternalStructure,
@@ -8,7 +19,7 @@ Class {
 	#pools : [
 		'WinTypesHelpers'
 	],
-	#category : #Windy
+	#category : #'Windy-Structures'
 }
 
 { #category : #'field definition' }

@@ -1,3 +1,13 @@
+"
+I represent the main header of a library of 64bits.
+https://docs.microsoft.com/en-us/windows/desktop/api/WinNT/ns-winnt-_image_nt_headers
+
+typedef struct _IMAGE_NT_HEADERS64 {
+    DWORD Signature;
+    IMAGE_FILE_HEADER FileHeader;
+    IMAGE_OPTIONAL_HEADER64 OptionalHeader;
+} IMAGE_NT_HEADERS64, *PIMAGE_NT_HEADERS64;
+"
 Class {
 	#name : #WDHeader64,
 	#superclass : #FFIExternalStructure,
@@ -9,7 +19,7 @@ Class {
 	#pools : [
 		'WinTypesHelpers'
 	],
-	#category : #Windy
+	#category : #'Windy-Structures'
 }
 
 { #category : #'field definition' }

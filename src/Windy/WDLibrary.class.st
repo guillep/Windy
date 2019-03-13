@@ -4,6 +4,8 @@ https://docs.microsoft.com/en-us/windows/desktop/api/dbghelp/ns-dbghelp-_loaded_
 
 ## Basic Usage
 
+### Loading a Library
+
 To load a library we can use either an explicit path or using the system resolution
 library := WDLibrary loadFileNamed: 'somelibrary.dll' path: FileSystem workindDirectory fullName.
 library := WDLibrary loadFileNamedWithSystemLookup: 'someLibrary.dll'.
@@ -13,6 +15,12 @@ In case you want to provide a specific behaviour on failure, you can use the var
 
 library := WDLibrary loadFileNamed: 'somelibrary.dll' path: FileSystem workindDirectory fullName ifAbsent: [ ""something"" ].
 library := WDLibrary loadFileNamedWithSystemLookup: 'someLibrary.dll' ifAbsent: [ ""something"" ].
+
+### Getting the library dependencies 
+
+A library implements #imports, returing a list of its directly imported dlls.
+
+library imports collect: #name.
 
 ## Implementation Details
 
@@ -67,7 +75,7 @@ Class {
 	#pools : [
 		'WinTypesHelpers'
 	],
-	#category : #Windy
+	#category : #'Windy-Core'
 }
 
 { #category : #'field definition' }

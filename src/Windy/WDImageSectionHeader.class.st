@@ -1,3 +1,13 @@
+"
+I represent the header of a section in a the library file.
+I contain the start and end addresses of the section.
+
+Most addresses of a library are mapped against a section.
+You can know if an address belongs to a section by asking #containsAddress:.
+Then you can map the address to the real physical address using the #mapAddress:inLibrary: method.
+
+https://docs.microsoft.com/en-us/windows/desktop/api/winnt/ns-winnt-_image_section_header
+"
 Class {
 	#name : #WDImageSectionHeader,
 	#superclass : #FFIExternalStructure,
@@ -23,7 +33,7 @@ Class {
 	#pools : [
 		'WinTypesHelpers'
 	],
-	#category : #Windy
+	#category : #'Windy-Structures'
 }
 
 { #category : #'field definition' }
